@@ -1,0 +1,41 @@
+1. To link central repo to local repo: git remote add origin https://github.com/shesman-chuadhary/test_me.git
+
+2. To add to index: git add file name
+
+3. To commit: git commit -m"message"
+
+4. To pull change from central repo: git pull origin master
+
+5. To clone: git clone https://github.com/shesman-chuadhary/test_me.git
+
+6. To pull changes when you changes but you don't want to discard: 
+	1.git stash -u (to hide the changes)
+	3.git pull origin master
+	2.git stash pop (to get back the changes again)
+
+7. To revert the changes:  git revert dca946c55ca4f12160cc50ab290fc3ededb43fee (copy the HEAD)
+
+8. To add all the changes: git add .(dot is after space)
+
+9. To create branch: git branch branch file
+
+10. The special "option" -- means "treat every argument after this point as a file name,
+no matter what it looks like." This is not Git-specific, it's a general Unix command line convention. 
+Normally you use it to clarify that an argument is a file name rather than an option, e.g.
+rm -f      # does nothing
+rm -- -f   # deletes a file named "-f"
+
+11. git checkout file name 'll discard the changes in file but if it is not added to index
+
+12. To git amend:
+	1. git add filename
+	2. git commit --amend
+
+13. To resolve MERGE CONFLICT
+	1. After commiting once you pass command to push your code you 'll get merge conflict
+	2. pass command: git pull --rebase origin master(rebase 'll try to cover both the code but since the changes are in same line
+		it 'll not be able to merge the file so it 'll ask for human intervention)
+	3. pass cmd: git mergetool
+	4. Resolve the conflict manually, save and exit
+	5. pas cmd: git rebase --continue
+	6. pass cmd: git push origin master
