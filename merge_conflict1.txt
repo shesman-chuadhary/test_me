@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 1.initial
 3.changes done by shes again
+=======
+1.initial
+>>>>>>> 4385bea4052203d825fc117c8445d0a33097b33a
